@@ -10,6 +10,7 @@ class RailsCalendar
       event['date'] = Date.parse(event['summary'].split('When:')[1].split('to')[0])
       event
     end
+    @cal = @cal.sort_by {|event| event['date']}
     File.open('tmp/events.yml','w'){|f| f.write @cal.to_yaml}
     @cal
   end
