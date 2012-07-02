@@ -21,7 +21,7 @@ class Github
   def projects
     projects = []
     devs.each do |dev|
-      ojfile = "tmp/projects-from-#{dev['login']}.yml"
+      file = "tmp/projects-from-#{dev['login']}.yml"
       if File.exists?(file)
         prects << YAML::load(File.read(file))
       else
