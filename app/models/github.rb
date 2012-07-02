@@ -38,8 +38,7 @@ class Github
     end
 
     projects.flatten!
-    projects.sort_by(&:watchers).reverse
-
+    projects.sort_by { |p| p["watchers"] }
   end
 
   private
