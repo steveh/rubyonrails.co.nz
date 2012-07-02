@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rack', '1.2.2'
 gem 'rails', '3.0.5'
-gem 'octopi'
+gem 'octokit'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
