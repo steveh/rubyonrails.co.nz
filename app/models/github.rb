@@ -23,7 +23,7 @@ class Github
     devs.each do |dev|
       file = "tmp/projects-from-#{dev['login']}.yml"
       if File.exists?(file)
-        prects << YAML::load(File.read(file))
+        projects << YAML::load(File.read(file))
       else
         begin # github returns 403 if API limit exceeded
           user_projects = select_projects(Octokit.repositories(dev['login']))
