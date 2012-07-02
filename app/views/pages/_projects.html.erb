@@ -3,9 +3,9 @@
   <ul>
     <% @projects.each do |project| %>
       <li>
-        <%= link_to project.name, project.html_url %>
+        <%= link_to project['name'], project['html_url'] %>
         <span class='watches'>
-          <%= project.watchers %> watchers
+          <%= project['watchers'] %> watchers
         </span>
       </li>
     <% end %>
